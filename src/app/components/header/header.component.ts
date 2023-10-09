@@ -11,11 +11,16 @@ import {ThemeService} from "../../services/theme/theme.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isOpen = false
   constructor(private themeServ:ThemeService) {
   }
 
   changeMode(){
     this.themeServ.changeTheme()
+  }
+
+  toggleMenu(){
+    this.isOpen = !this.isOpen
   }
 
   protected readonly settings = settings;

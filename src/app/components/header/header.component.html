@@ -1,30 +1,39 @@
 <nav>
-  <span><img [src]="settings.logo" alt="">{{settings.logo_title}}</span>
+ <div class="navbar-desktop">
+   <span><img [src]="settings.logo" alt="">{{settings.logo_title}}</span>
 
-  <ul class="d-none d-lg-flex">
-    <li *ngFor="let item of menu"><a href="" [routerLink]="item.path">{{item.label}}</a></li>
+   <ul class="d-none d-lg-flex">
+     <li *ngFor="let item of menu"><a href="" [routerLink]="item.path">{{item.label}}</a></li>
 
-  </ul>
+   </ul>
 
-  <div class="settings d-none d-lg-flex">
-    <div class="controls">
-      <span class="icon-btn"><i class="bi bi-chat-left-dots-fill"></i></span>
-      <span class="icon-btn"><i class="bi bi-bell-fill"></i></span>
-      <span (click)="changeMode()" class="icon-btn"><i class="bi bi-moon"></i></span>
-    </div>
-    <div class="profile">
-      <div class="profile_title d-flex">
-        <div>
-          <h6>{{user.name}}</h6>
-          <p>Vote:{{user.vote}},Survey:{{user.survey}}</p>
-        </div>
-        <span class="d-flex align-items-center">
+   <div class="settings d-none d-lg-flex">
+     <div class="controls">
+       <span class="icon-btn"><i class="bi bi-chat-left-dots-fill"></i></span>
+       <span class="icon-btn"><i class="bi bi-bell-fill"></i></span>
+       <span (click)="changeMode()" class="icon-btn"><i class="bi bi-moon"></i></span>
+     </div>
+     <div class="profile">
+       <div class="profile_title d-flex">
+         <div>
+           <h6>{{user.name}}</h6>
+           <p>Vote:{{user.vote}},Survey:{{user.survey}}</p>
+         </div>
+         <span class="d-flex align-items-center">
           <i class="bi bi-caret-down-fill"></i>
         </span>
-      </div>
-      <span class="profile_pic">
+       </div>
+       <span class="profile_pic">
         <img [src]="user.img" alt="">
       </span>
-    </div>
+     </div>
+   </div>
+
+   <span (click)="toggleMenu()" class="menu-bar-icon d-block d-lg-none"><i class="bi bi-list"></i></span>
+ </div>
+
+  <div class="navbar-mobile" [ngClass]="{'isOpen':isOpen}">
+      Lorem ipsum dolor sit amet.
+
   </div>
 </nav>
