@@ -1,0 +1,11 @@
+@import "styles/colors";
+
+footer{
+  padding: 20px 20px;
+  color: var(--font-color);
+  background-color: var(--footer-bg-color);
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+
+}

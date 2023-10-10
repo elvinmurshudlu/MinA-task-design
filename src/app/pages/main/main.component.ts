@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {cards} from "../../constants/cards";
 
 @Component({
   selector: 'mina-main',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+  mainCards = cards
+
+  protected readonly Array = Array;
 }

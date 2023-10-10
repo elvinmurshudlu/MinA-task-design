@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {settings} from "../../constants/settings";
+import {footerMenu} from "../../constants/footer";
 
 @Component({
   selector: 'mina-footer',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  protected readonly settings = settings;
+  protected readonly footerMenu = footerMenu;
 }

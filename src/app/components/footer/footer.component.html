@@ -1,1 +1,7 @@
-<p>footer works!</p>
+<footer class="flex-column flex-md-row">
+  <p>Mail: {{settings.mail}}</p>
+  <ul class="d-flex gap-3 flex-column flex-md-row">
+    <li *ngFor="let item of footerMenu"><a [routerLink]="[item.path]">{{item.label}}</a></li>
+  </ul>
+  <p class="text-end">{{settings.copyright}}</p>
+</footer>

@@ -1,3 +1,6 @@
-<div >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aperiam blanditiis debitis dicta doloremque exercitationem minus modi quibusdam quisquam sit suscipit temporibus ullam. Autem blanditiis dicta, et maiores possimus veniam.
+<div class="main-container">
+  <div *ngFor="let card of mainCards" class="card-item">
+    <mina-card [card]="card"></mina-card>
+  </div>
 </div>
+
