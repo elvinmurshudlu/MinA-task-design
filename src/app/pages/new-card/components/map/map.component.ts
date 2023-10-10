@@ -35,9 +35,12 @@ export class MapComponent implements AfterViewInit{
       });
       map.addLayer({
         'id': 'route',
-        'type': 'circle',
+        'type': 'fill',
         'source': 'route',
-
+        'paint': {
+          'fill-color': '#FF0000', // Fill color (adjust as needed)
+          'fill-opacity': 0.5      // Fill opacity (adjust as needed)
+        },
       });
     });
 
