@@ -7,7 +7,6 @@ import {ThemeService} from "./services/theme/theme.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mina-design';
   isDarkMode = true
 
   constructor(private themeServ:ThemeService) {
