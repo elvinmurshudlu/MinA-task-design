@@ -5,12 +5,45 @@
   background-color: var(--footer-bg-color);
   @include addBorder;
 
-  label{
-    input,textarea,select{
-      background-color: var(--nav-bg-color);
-      border: none;
-      @include addBorder;
+  form{
+    display: flex;
+    flex-direction: column;
+     row-gap: 10px;
+    label{
+      row-gap: 5px;
+      input,textarea,select{
+        background-color: var(--nav-bg-color);
+        border: none;
+        @include addBorder;
+      }
+    }
+
+    .error{
+      input,textarea,select{
+        border: 1px solid red;
+      }
+
     }
   }
 
+}
+
+.select-container{
+  width: 100%;
+
+
+}
+:host ::ng-deep .select-button{
+  width: 100% ;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 7px;
+
+
+}
+:host ::ng-deep .dropdown-menu{
+  width: 100%;
+  background-color: var(--nav-bg-color);
 }

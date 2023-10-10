@@ -1,30 +1,28 @@
 <div class="create-container p-2">
   <h5>{{form_settings.title}}</h5>
 
-  <form [formGroup]="formGroup" action="">
+  <form [formGroup]="form" action="">
 
     <ng-container *ngFor="let field of form_settings.fields">
-      <label [ngStyle]="{width:'100%'}">
-        {{field.label}} <br>
+      <label class="d-flex flex-column " [ngStyle]="{width:'100%'}" [ngClass]="{error:form.get(field.field)?.invalid && isSubmitted}">
 
+<!--        <div [ngStyle]="{color:'red'}" >Error</div>-->
 
+        <span >{{field.label}}</span>
 
-        <input [ngStyle]="{width:'100%'}" type="text" *ngIf="field.type ==='input-text'">
-        <textarea [ngStyle]="{width:'100%'}" *ngIf="field.type ==='textarea'"></textarea>
-
-        <select [ngStyle]="{width:'100%'}" *ngIf="field.type ==='select'">
-
-        </select>
+        <input [formControlName]="field.field" [ngStyle]="{width:'100%'}" type="text" *ngIf="field.type ==='input-text'">
+        <textarea [formControlName]="field.field" [ngStyle]="{width:'100%'}" *ngIf="field.type ==='textarea'"></textarea>
+          <ngx-bootstrap-multiselect [texts]="myTexts" *ngIf="field.type ==='select'" [formControlName]="field.field" [ngStyle]="{width:'100%'}" [settings]="selectSettings" [options]="myOptions" ></ngx-bootstrap-multiselect>
 
         <ng-container *ngIf="field.type === 'SpecialComponent1' ">
           Lorem ipsum dolor.
 
         </ng-container>
 
-      </label> <br>
+      </label>
     </ng-container>
 
-
+<button (click)="test()">Console</button>
 
   </form>
 
