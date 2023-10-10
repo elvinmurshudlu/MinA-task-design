@@ -24,6 +24,7 @@
     "bootstrap-icons": "^1.11.1",
     "ngx-bootstrap-multiselect": "^4.0.0",
     "rxjs": "~7.8.0",
+    "tabulator-tables": "^5.5.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
@@ -33,6 +34,7 @@
     "@angular/compiler-cli": "^16.1.0",
     "@angular/localize": "^16.1.0",
     "@types/jasmine": "~4.3.0",
+    "@types/tabulator-tables": "^5.5.2",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

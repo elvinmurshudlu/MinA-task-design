@@ -1,6 +1,29 @@
+@import "styles/colors";
+
 .color-container{
   max-height: 170px;
   width: 100%;
   overflow: hidden;
   background-color: var(--nav-bg-color);
+
+  table{
+    tr:first-child{
+    }
+
+    th,td{
+      width: 33%;
+      padding: 5px ;
+      font-size: 13px;
+    }
+
+    th{
+      background-color:var(--nav-bg-color) ;
+
+    }
+
+    td{
+      background-color:var(--body-bg-color) ;
+
+    }
+  }
 }
