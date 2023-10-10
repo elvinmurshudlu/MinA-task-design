@@ -1,6 +1,11 @@
-<div class="main-container">
+<div #cardsContainer class="main-container" (scroll)="onScroll()">
   <div *ngFor="let card of mainCards" class="card-item">
     <mina-card [card]="card"></mina-card>
+  </div>
+  <div *ngIf="!(cards.length <= elements)" class="w-100 d-flex justify-content-center ">
+    <i class="bi bi-dot"></i>
+    <i class="bi bi-dot"></i>
+    <i class="bi bi-dot"></i>
   </div>
 </div>
 

@@ -1,8 +1,10 @@
 
 <!--class="d-flex flex-column justify-content-between"-->
 <div id="container" [ngStyle]="{minHeight:'100vh'}" [ngClass]="{'dark-mode':isDarkMode}" >
-  <mina-header></mina-header>
-  <mina-main></mina-main>
+  <mina-header ></mina-header>
+  <div class="router-container">
+    <mina-main></mina-main>
+  </div>
 
   <mina-footer></mina-footer>
 
