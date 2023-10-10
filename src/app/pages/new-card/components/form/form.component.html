@@ -4,18 +4,30 @@
   <form [formGroup]="form" action="">
 
     <ng-container *ngFor="let field of form_settings.fields">
-      <label class="d-flex flex-column " [ngStyle]="{width:'100%'}" [ngClass]="{error:form.get(field.field)?.invalid && isSubmitted}">
+      <label class="d-flex flex-column " [ngClass]="{error:form.get(field.field)?.invalid && isSubmitted}">
 
 <!--        <div [ngStyle]="{color:'red'}" >Error</div>-->
 
         <span >{{field.label}}</span>
 
-        <input [formControlName]="field.field" [ngStyle]="{width:'100%'}" type="text" *ngIf="field.type ==='input-text'">
-        <textarea [formControlName]="field.field" [ngStyle]="{width:'100%'}" *ngIf="field.type ==='textarea'"></textarea>
-          <ngx-bootstrap-multiselect [texts]="myTexts" *ngIf="field.type ==='select'" [formControlName]="field.field" [ngStyle]="{width:'100%'}" [settings]="selectSettings" [options]="myOptions" ></ngx-bootstrap-multiselect>
+        <input [formControlName]="field.field"  type="text" *ngIf="field.type ==='input-text'">
+        <textarea [formControlName]="field.field"  *ngIf="field.type ==='textarea'"></textarea>
+          <ngx-bootstrap-multiselect [texts]="myTexts" *ngIf="field.type ==='select'" [formControlName]="field.field"  [settings]="selectSettings" [options]="myOptions" ></ngx-bootstrap-multiselect>
 
         <ng-container *ngIf="field.type === 'SpecialComponent1' ">
-          Lorem ipsum dolor.
+          <div class="answer d-flex">
+            <input  type="text" placeholder="Write Answer">
+            <div>
+              <button>Choose color</button>
+              <button>Add to list</button>
+            </div>
+          </div>
+
+<!--          <div class="color-container mt-1">-->
+<!--              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consequuntur et eum explicabo facere ipsam laboriosam laudantium obcaecati officiis quibusdam sequi soluta suscipit, tenetur totam veritatis. Ab ad atque consectetur consequuntur error exercitationem expedita incidunt inventore ipsam iusto minima, pariatur perferendis sapiente sequi sit tempore ullam? Aliquid animi asperiores consequatur consequuntur corporis cumque, cupiditate dolor dolores ducimus, ea enim et ex facere, fugit hic id in ipsa modi mollitia nemo nobis nostrum odio officia placeat porro possimus provident quasi quisquam recusandae sapiente sit tempora voluptate voluptatum? Ad, debitis deserunt eligendi excepturi laborum magni nam nihil obcaecati, pariatur similique vel voluptatibus.-->
+<!--          </div>-->
+
+          <mina-answers></mina-answers>
 
         </ng-container>
 

@@ -6,12 +6,14 @@ import { NewCardComponent } from './new-card.component';
 import { FormComponent } from './components/form/form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {NgxBootstrapMultiselectModule} from "ngx-bootstrap-multiselect";
+import { AnswersComponent } from './components/answers/answers.component';
 
 
 @NgModule({
   declarations: [
     NewCardComponent,
-    FormComponent
+    FormComponent,
+    AnswersComponent
   ],
   imports: [
     CommonModule,

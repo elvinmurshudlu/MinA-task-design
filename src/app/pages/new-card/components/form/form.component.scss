@@ -1,7 +1,7 @@
 @import "styles/colors";
 @import "styles/mixins";
 .create-container{
-
+height: 100%;
   background-color: var(--footer-bg-color);
   @include addBorder;
 
@@ -9,12 +9,47 @@
     display: flex;
     flex-direction: column;
      row-gap: 10px;
+    height: 100%;
+
     label{
       row-gap: 5px;
+      width: 100%;
+
+
       input,textarea,select{
+        padding: 2px 4px;
+        width: 100%;
         background-color: var(--nav-bg-color);
         border: none;
         @include addBorder;
+      }
+
+      .answer{
+        input{
+          width: 55%;
+        }
+
+        div{
+          padding-left: 4px;
+          width: 45%;
+          button{
+            width: 50%;
+            font-size: 10px;
+            padding: 3px 2px;
+            height: 100%;
+            color: var(--font-color-btn);
+            @include addBorder;
+          }
+
+          button:nth-child(1){
+            background-color: var(--choose-color-btn);
+          }
+          button:nth-child(2){
+            background-color: var(--add-to-list-bg);
+          }
+
+        }
+
       }
     }
 
@@ -40,10 +75,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 2px 7px;
+  @include addBorder;
+  border: none;
 
 
 }
 :host ::ng-deep .dropdown-menu{
   width: 100%;
+  background-color: var(--nav-bg-color);
+}
+
+
+.color-container{
+  max-height: 170px;
+  width: 100%;
+  overflow: hidden;
   background-color: var(--nav-bg-color);
 }
