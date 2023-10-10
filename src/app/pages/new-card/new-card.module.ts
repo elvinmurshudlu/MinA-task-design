@@ -7,6 +7,9 @@ import { FormComponent } from './components/form/form.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {NgxBootstrapMultiselectModule} from "ngx-bootstrap-multiselect";
 import { AnswersComponent } from './components/answers/answers.component';
+import {ColorPickerModule} from "primeng/colorpicker";
+import {OverlayPanelModule} from "primeng/overlaypanel";
+import {ButtonModule} from "primeng/button";
 
 
 @NgModule({
@@ -19,7 +22,12 @@ import { AnswersComponent } from './components/answers/answers.component';
     CommonModule,
     NewCardRoutingModule,
     ReactiveFormsModule,
-    NgxBootstrapMultiselectModule
-  ]
+    NgxBootstrapMultiselectModule,
+    ColorPickerModule,
+    OverlayPanelModule,
+    ButtonModule,
+
+  ],
+
 })
 export class NewCardModule { }

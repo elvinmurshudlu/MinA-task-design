@@ -1,8 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {form_settings} from "../../../../constants/forms";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {settings} from "../../../../constants/settings";
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from "ngx-bootstrap-multiselect";
+import {AnswerService} from "../../../../services/add-answer/answer.service";
+
+
+interface IAnswers{
+  color:string,
+  answer:string
+}
 
 @Component({
   selector: 'mina-form',
@@ -10,21 +17,19 @@ import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from "ngx-b
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent   {
+@ViewChild('answer') answerInput !:ElementRef<HTMLInputElement>
+  datas:IAnswers[]  = []
 
-  formGroup = new FormGroup({
-    'card-title':new FormControl('',[Validators.required]),
-    'card-desc':new FormControl('',[Validators.required]),
-    'select1':new FormControl('',[Validators.required]),
-    'select2':new FormControl('',[Validators.required]),
-    'answers':new FormControl('',[Validators.required]),
-  })
+
 
   isSubmitted  = false
 
   form: FormGroup;
 
-  constructor() {
-    const group: any = {};
+  constructor(private ansServ:AnswerService) {
+    const group: any = {
+      'color':new FormControl()
+    };
 
     this.form_settings.fields.forEach(inputConfig => {
       group[inputConfig.field] = new FormControl(
@@ -67,9 +72,23 @@ export class FormComponent   {
   }
 
 
+
   test(){
     this.isSubmitted = true
     console.log(this.form)
+  }
+
+
+  addColor(){
+    const color = this.form.get('color')?.value
+    const answer = this.answerInput.nativeElement.value
+
+    this.datas.push({color,answer})
+
+    this.ansServ.addAnswer({color,answer})
+
+    console.log(this.datas,'answers=====')
+
   }
 
   protected readonly form_settings = form_settings;
