@@ -10,21 +10,18 @@ import * as mapboxgl from 'mapbox-gl';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements AfterViewInit{
-
   @ViewChild('map') mapEl !:ElementRef
-
   token = "pk.eyJ1IjoiZWx2aW5tdXJzaHVkbHUiLCJhIjoiY2xua2xyMmV6MXZqajJrdzVsNHNyZ2I0NCJ9.Zdc_PFFpzqDzum8kHTu7uA"
-
 
   ngAfterViewInit() {
 
-
-
     // @ts-ignore
     mapboxgl.accessToken = this.token;
-    var map = new mapboxgl.Map({
+    const  map = new mapboxgl.Map({
       container: this.mapEl.nativeElement,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/dark-v11',
+      center: [28.9784, 41.0082],
+      zoom: 8.5
     });
 
 
@@ -33,14 +30,25 @@ export class MapComponent implements AfterViewInit{
         'type': 'geojson',
         'data': 'assets/istanbul-nufus-geo.geojson'
       });
+      const colorStops = [
+        [0, '#dede08'],
+        [4000, '#deb308'],
+        [10000, '#e0350a'],
+
+      ];
       map.addLayer({
         'id': 'route',
         'type': 'fill',
         'source': 'route',
-        'paint': {
-          'fill-color': '#FF0000', // Fill color (adjust as needed)
-          'fill-opacity': 0.5      // Fill opacity (adjust as needed)
-        },
+        paint: {
+          'fill-color': {
+            property: 'maas',
+            stops: colorStops
+          },
+          'fill-opacity': 0.7
+        }
+
+
       });
     });
 
