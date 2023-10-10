@@ -9,7 +9,7 @@ import {cards} from "../../constants/cards";
 export class MainComponent {
 
   @ViewChild('cardsContainer') cardContainer !: ElementRef
-  elements = 20
+  elements = 19
 
   mainCards = cards.slice(0,this.elements)
 
@@ -20,7 +20,7 @@ export class MainComponent {
 
 
     if(nativeElement.clientHeight + Math.ceil(nativeElement.scrollTop) +2 >= nativeElement.scrollHeight  ){
-      this.elements+=10
+      this.elements+=5
       this.mainCards = cards.slice(0,this.elements)
     }
   }

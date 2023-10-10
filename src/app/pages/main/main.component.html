@@ -1,4 +1,7 @@
 <div #cardsContainer class="main-container" (scroll)="onScroll()">
+  <div class="card-item">
+    <mina-add-card></mina-add-card>
+  </div>
   <div *ngFor="let card of mainCards" class="card-item">
     <mina-card [card]="card"></mina-card>
   </div>
