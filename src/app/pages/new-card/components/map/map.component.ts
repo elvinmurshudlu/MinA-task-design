@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
+
 import * as mapboxgl from 'mapbox-gl';
-
-
 
 
 @Component({
@@ -45,11 +44,24 @@ export class MapComponent implements AfterViewInit{
             property: 'maas',
             stops: colorStops
           },
-          'fill-opacity': 0.7
+          'fill-opacity': 0.9
         }
-
-
       });
+
+      map.addLayer({
+        id: 'labels',
+        type: 'symbol',
+        source: 'route',
+        layout: {
+          'text-field': ['get', 'ILCEAD'],
+          'text-size': 13,
+          'text-anchor': 'center',
+        },
+        paint: {
+          'text-color': 'white', // Adjust the label text color
+        }
+      });
+
     });
 
   }
