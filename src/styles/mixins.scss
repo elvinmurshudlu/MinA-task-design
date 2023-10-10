@@ -26,3 +26,9 @@ $extra-small-device-width: 575px;
     @content;
   }
 }
+
+
+@mixin addBorder{
+  border-radius: 5px;
+
+}

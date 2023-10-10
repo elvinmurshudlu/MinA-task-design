@@ -1,0 +1,32 @@
+<div class="create-container p-2">
+  <h5>{{form_settings.title}}</h5>
+
+  <form [formGroup]="formGroup" action="">
+
+    <ng-container *ngFor="let field of form_settings.fields">
+      <label [ngStyle]="{width:'100%'}">
+        {{field.label}} <br>
+
+
+
+        <input [ngStyle]="{width:'100%'}" type="text" *ngIf="field.type ==='input-text'">
+        <textarea [ngStyle]="{width:'100%'}" *ngIf="field.type ==='textarea'"></textarea>
+
+        <select [ngStyle]="{width:'100%'}" *ngIf="field.type ==='select'">
+
+        </select>
+
+        <ng-container *ngIf="field.type === 'SpecialComponent1' ">
+          Lorem ipsum dolor.
+
+        </ng-container>
+
+      </label> <br>
+    </ng-container>
+
+
+
+  </form>
+
+
+</div>

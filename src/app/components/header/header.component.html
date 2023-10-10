@@ -1,7 +1,7 @@
 <nav>
  <div class="nav-container">
    <div class="navbar-desktop">
-     <span><img [src]="settings.logo" alt="">{{settings.logo_title}}</span>
+     <a [routerLink]="['/']"><img [src]="settings.logo" alt="">{{settings.logo_title}}</a>
 
      <ul class="d-none d-lg-flex">
        <li *ngFor="let item of menu"><a href="" [routerLink]="item.path">{{item.label}}</a></li>

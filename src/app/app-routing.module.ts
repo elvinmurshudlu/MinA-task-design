@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AppComponent} from "./app.component";
 
 const routes: Routes = [{
   path:'',
-  component:AppComponent,
   children:[{
     path:'',
     loadChildren:()=>import("./pages/main/main.module").then(m=>m.MainModule)
-  }]
+  },
+    {
+      path:'new-card',
+      loadChildren:()=>import("./pages/new-card/new-card.module").then(m=>m.NewCardModule)
+    }
+    ]
 }];
 
 @NgModule({
