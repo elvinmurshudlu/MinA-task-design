@@ -10,13 +10,15 @@ import { AnswersComponent } from './components/answers/answers.component';
 import {ColorPickerModule} from "primeng/colorpicker";
 import {OverlayPanelModule} from "primeng/overlaypanel";
 import {ButtonModule} from "primeng/button";
+import { MapComponent } from './components/map/map.component';
 
 
 @NgModule({
   declarations: [
     NewCardComponent,
     FormComponent,
-    AnswersComponent
+    AnswersComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,
