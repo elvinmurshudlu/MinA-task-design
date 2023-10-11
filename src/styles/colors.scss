@@ -1,9 +1,10 @@
 :root{
 
-  --nav-bg-color: #8d8c8c;
-  --body-bg-color: #5d5d5d;
-  --footer-bg-color: #414040;
+  --nav-bg-color: #d5d5d5;
+  --body-bg-color: #b0b0b0;
+  --footer-bg-color: #9d9d9d;
   --font-color:black;
+  --card-font-color:white;
   --border-color:#09c9c9;
   --card-text-bg:rgba(0, 0, 0, 0.42);
   --add-card-border:#63ba09;
@@ -11,11 +12,13 @@
   --add-to-list-bg:#dddddd;
   --font-color-btn:rgba(90,84,69,255);
   --form-btn-color:#47bde5;
-  --form-bg:#282828;
+  --form-bg: #858585;
 }
 
 
 .dark-mode{
+  --card-font-color:black;
+
   --nav-bg-color:#4e4e4e;
   --body-bg-color:#333333;
   --footer-bg-color:#232323;
