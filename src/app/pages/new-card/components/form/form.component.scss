@@ -22,7 +22,8 @@ height: 100%;
         width: 100%;
         background-color: var(--nav-bg-color);
         border: none;
-        @include addBorder;
+        //@include addBorder;
+        border-radius:3px;
       }
       textarea{
         height: 70px;
@@ -84,8 +85,10 @@ height: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 2px 7px;
-  @include addBorder;
+  //@include addBorder;
   border: none;
+  border-radius:3px;
+
 
 
 }
@@ -114,5 +117,8 @@ height: 100%;
   padding: 6px 20px;
   font-size: 13px;
   font-weight: bold;
-  @include addBorder;
+  //@include addBorder;
+  border-radius:3px;
+
 }
+
