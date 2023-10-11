@@ -23,7 +23,7 @@
         <ng-container *ngIf="field.type === 'SpecialComponent1' ">
           <div class="answer d-flex">
             <input  type="text" placeholder="Write Answer" #answer>
-            <div>
+            <div class="d-flex">
               <button (click)="op.toggle($event)">Choose color
               </button>
               <button (click)="addColor()">Add to list</button>
