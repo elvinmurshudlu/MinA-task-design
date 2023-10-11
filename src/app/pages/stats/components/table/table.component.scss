@@ -23,6 +23,11 @@
   border:none !important;
 }
 
+::ng-deep .tabulator-header-contents{
+  background-color: var(--nav-bg-color) !important;
+
+}
+
 ::ng-deep .tabulator-row{
   background-color: var(--footer-bg-color) !important;
   border:none !important;
@@ -35,7 +40,7 @@
 
 ::ng-deep .tabulator-cell{
   border:none !important;
-  font-size:11px  !important;
+  font-size:12px  !important;
   font-weight:100;
 }
 ::-webkit-scrollbar{

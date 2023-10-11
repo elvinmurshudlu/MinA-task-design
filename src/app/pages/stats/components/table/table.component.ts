@@ -28,7 +28,7 @@ export class TableComponent implements AfterViewInit{
   columns :ColumnDefinition[] = [
     {title:'#',field:'id',width:'10%',headerSort:false,resizable:false},
     {title:'Place Name',field:'label',width:'30%',headerSort:false ,resizable:false},
-    {title:'Most answer',field:'answer',width:'58%',headerSort:false ,resizable:false},
+    {title:'Most answer',field:'answer',width:'60%',headerSort:false ,resizable:false},
 
 
   ]
