@@ -17,6 +17,18 @@ nav{
       color: var(--font-color);
 
 
+      position: relative;
+
+      .main-menu-links{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+
       ul{
         display: flex;
         column-gap: 30px;
