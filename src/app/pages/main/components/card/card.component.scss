@@ -36,6 +36,13 @@
       border-radius: 5px;
       font-size: 10px;
       padding: 4px;
+      &_icons{
+        width: 25%;
+        padding-right: 3px;
+      }
+      &_text{
+        width: 75%;
+      }
 
       &_title{
         font-size: 1.3em;
@@ -48,7 +55,7 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        max-width: 80%;
+        max-width: 100%;
 
       }
     }
