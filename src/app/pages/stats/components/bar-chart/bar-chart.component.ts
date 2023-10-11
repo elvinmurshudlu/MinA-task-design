@@ -33,7 +33,8 @@ export class BarChartComponent implements OnInit{
 
   chartLabels:string[] = [ ];
   chartDatasets :{data:number[]}[] = [ {
-    data: [ ]
+    data: [ ],
+
   } ];
 
 

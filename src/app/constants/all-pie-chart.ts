@@ -1,5 +1,5 @@
 export const allPie = {
-  "title":"Top 10 Descending Results",
+  "title":"All Result Pie Chart",
   "type":"chart-pie",
   "data":[
     {"label":"Besiktas","vote":150},
