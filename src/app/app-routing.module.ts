@@ -12,7 +12,7 @@ const routes: Routes = [{
       loadChildren:()=>import("./pages/new-card/new-card.module").then(m=>m.NewCardModule)
     },
     {
-      path:':id',
+      path:'cards/:id',
       loadChildren:()=>import('./pages/stats/stats.module').then(m=>m.StatsModule)
     }
     ]
