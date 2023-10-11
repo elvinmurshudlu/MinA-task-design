@@ -5,12 +5,18 @@ height: 100%;
   background-color: var(--form-bg);
   @include addBorder;
 
+
+
   form{
     position: relative;
     display: flex;
     flex-direction: column;
      row-gap: 10px;
     height: 100%;
+
+    h6{
+      font-weight: 400;
+    }
 
     label{
       row-gap: 5px;
@@ -33,6 +39,9 @@ height: 100%;
       .answer{
         input{
           width: 55%;
+          &::placeholder{
+            color:var(--font-color)
+          }
         }
 
         div{

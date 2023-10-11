@@ -1,14 +1,28 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {form_settings} from "../../../../constants/forms";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {settings} from "../../../../constants/settings";
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from "ngx-bootstrap-multiselect";
 import {AnswerService} from "../../../../services/add-answer/answer.service";
+import {HttpClient} from "@angular/common/http";
 
 
 interface IAnswers{
   color:string,
   answer:string
+}
+
+interface IFormValue {
+  answers: any[]
+
+  color: any
+
+  desc: string
+
+  select1: any[]
+
+  select2: any[]
+
+  title: string
 }
 
 @Component({
@@ -26,7 +40,7 @@ export class FormComponent   {
 
   form: FormGroup;
 
-  constructor(private ansServ:AnswerService) {
+  constructor(private ansServ:AnswerService,private http :HttpClient) {
     const group: any = {
       'color':new FormControl(),
     };
@@ -73,10 +87,28 @@ export class FormComponent   {
 
 
 
-  test(){
+
+  sendData(){
     this.answerInput.nativeElement.style.border = 'none'
     this.isSubmitted = true
     console.log(this.form)
+
+    if(!this.form.valid){
+      return
+
+    }
+
+    const data = {
+
+    }
+     const {color,...rest}= this.form.value as IFormValue
+
+    this.http.post("https://jsonplaceholder.typicode.com/posts",rest).subscribe(response=>{
+      console.log(response)
+    },error=>{
+      console.log(error)
+    })
+    // console.log('Melumat gonderildi',rest)
   }
 
 

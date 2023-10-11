@@ -11,6 +11,7 @@ import {ColorPickerModule} from "primeng/colorpicker";
 import {OverlayPanelModule} from "primeng/overlaypanel";
 import {ButtonModule} from "primeng/button";
 import {MapModule} from "../../shared/map/map.module";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MapModule} from "../../shared/map/map.module";
     ColorPickerModule,
     OverlayPanelModule,
     ButtonModule,
-    MapModule
+    MapModule,
+    HttpClientModule
 
   ],
 

@@ -2,7 +2,7 @@
 
 
   <form [formGroup]="form" action="">
-    <h5>{{form_settings.title}}</h5>
+    <h6>{{form_settings.title}}</h6>
     <p-overlayPanel #op>
       <!--              <img src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg" alt="product" />-->
       <p-colorPicker [inline]="true"  formControlName="color"></p-colorPicker>
@@ -38,7 +38,7 @@
     </ng-container>
 
       <div class="d-flex justify-content-end btn-submit-container">
-        <button class="btn-submit" (click)="test()">Save</button>
+        <button class="btn-submit" (click)="sendData()">Save</button>
       </div>
 
   </form>
