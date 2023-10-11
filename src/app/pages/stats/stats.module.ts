@@ -7,13 +7,15 @@ import {MapModule} from "../../shared/map/map.module";
 import { GraphContainerComponent } from './components/graph-container/graph-container.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import {NgChartsModule} from "ng2-charts";
+import { TableComponent } from './components/table/table.component';
 
 
 @NgModule({
   declarations: [
     StatsComponent,
     GraphContainerComponent,
-    BarChartComponent
+    BarChartComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,

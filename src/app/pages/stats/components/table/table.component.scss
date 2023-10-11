@@ -1,0 +1,41 @@
+.tabulator{
+  max-height: 140px;
+  border:none;
+  color:var(--font-color);
+  background-color:var(--body-bg-color);
+
+
+}
+
+::ng-deep .tabulator-col{
+  background-color: var(--nav-bg-color) !important;
+  border:none !important;
+  //width: calc(100% / 3) !important;
+}
+
+
+::ng-deep .tabulator-headers{
+  width:100%!important;
+}
+
+
+::ng-deep .tabulator-header{
+  border:none !important;
+}
+
+::ng-deep .tabulator-row{
+  background-color: var(--footer-bg-color) !important;
+  border:none !important;
+
+  &:hover{
+    background-color: var(--footer-bg-color);
+
+  }
+}
+
+::ng-deep .tabulator-cell{
+  border:none !important;
+}
+::-webkit-scrollbar{
+  display: none;
+}
