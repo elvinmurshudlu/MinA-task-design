@@ -1,14 +1,12 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 
 import * as mapboxgl from 'mapbox-gl';
-
-
 @Component({
   selector: 'mina-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements AfterViewInit{
+export class MapComponent {
   @ViewChild('map') mapEl !:ElementRef
   token = "pk.eyJ1IjoiZWx2aW5tdXJzaHVkbHUiLCJhIjoiY2xua2xyMmV6MXZqajJrdzVsNHNyZ2I0NCJ9.Zdc_PFFpzqDzum8kHTu7uA"
 
@@ -65,5 +63,4 @@ export class MapComponent implements AfterViewInit{
     });
 
   }
-
 }

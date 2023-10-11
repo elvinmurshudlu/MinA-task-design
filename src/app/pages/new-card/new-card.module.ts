@@ -10,7 +10,7 @@ import { AnswersComponent } from './components/answers/answers.component';
 import {ColorPickerModule} from "primeng/colorpicker";
 import {OverlayPanelModule} from "primeng/overlaypanel";
 import {ButtonModule} from "primeng/button";
-import { MapComponent } from './components/map/map.component';
+import {MapModule} from "../../shared/map/map.module";
 
 
 @NgModule({
@@ -18,7 +18,6 @@ import { MapComponent } from './components/map/map.component';
     NewCardComponent,
     FormComponent,
     AnswersComponent,
-    MapComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +27,7 @@ import { MapComponent } from './components/map/map.component';
     ColorPickerModule,
     OverlayPanelModule,
     ButtonModule,
+    MapModule
 
   ],
 
