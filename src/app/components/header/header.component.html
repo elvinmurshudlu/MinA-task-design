@@ -3,13 +3,16 @@
    <div class="navbar-desktop">
      <a [routerLink]="['/']"><img [src]="settings.logo" alt="">{{settings.logo_title}}</a>
 
-     <div class="main-menu-links d-none d-lg-flex">
-       <ul class="d-none d-lg-flex">
-         <li *ngFor="let item of menu"><a href="" [routerLink]="item.path">{{item.label}}</a></li>
+<!--     <div class="main-menu-links d-none d-lg-flex">-->
+<!--       <ul class="d-none d-lg-flex">-->
+<!--         <li *ngFor="let item of menu"><a href="" [routerLink]="item.path">{{item.label}}</a></li>-->
 
-       </ul>
-     </div>
+<!--       </ul>-->
+<!--     </div>-->
+     <ul class="d-none d-lg-flex">
+       <li *ngFor="let item of menu"><a href="" [routerLink]="item.path">{{item.label}}</a></li>
 
+     </ul>
 
 
      <div class="settings d-none d-lg-flex">
