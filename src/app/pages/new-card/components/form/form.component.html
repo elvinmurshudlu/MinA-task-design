@@ -1,7 +1,8 @@
 <div class="create-container p-2">
-  <h5>{{form_settings.title}}</h5>
+
 
   <form [formGroup]="form" action="">
+    <h5>{{form_settings.title}}</h5>
     <p-overlayPanel #op>
       <!--              <img src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg" alt="product" />-->
       <p-colorPicker [inline]="true"  formControlName="color"></p-colorPicker>
@@ -36,7 +37,7 @@
       </label>
     </ng-container>
 
-<button (click)="test()">Console</button>
+      <button class="btn-submit" (click)="test()">Save</button>
 
   </form>
 

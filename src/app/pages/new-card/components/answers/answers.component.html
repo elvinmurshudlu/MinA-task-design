@@ -1,18 +1,28 @@
-<!--<div class="color-container mt-1" #table>-->
-<!--  <table>-->
-<!--    <tr>-->
-<!--      <th>Color</th>-->
-<!--      <th>Answers</th>-->
-<!--      <th>Operations</th>-->
-<!--    </tr>-->
+<div class="color-container mt-1" #table>
+  <table>
+    <thead>
+    <tr class="table-header">
+      <th>Color</th>
+      <th>Answers</th>
+      <th>Operations</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let row of data"  [ngStyle]="{borderLeftStyle:'solid',borderLeftWidth:'1px',borderColor:row.color}">
+      <td [ngStyle]="{color:row.color}">{{row.color}}</td>
+      <td>{{row.answer}}</td>
+      <td></td>
+    </tr>
+    </tbody>
 
 
 
 
-<!--  </table>-->
-<!--</div>-->
-
-
-
-<div #table>
+  </table>
 </div>
+
+
+
+<!--<div #table>-->
+<!--</div>-->

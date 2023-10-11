@@ -17,16 +17,11 @@ export class AnswersComponent  implements AfterViewInit ,OnChanges{
 
   tabulatorTable !:TypeTabulator
 
-  modalData:IData | null = null
+
   geoMapIcon = function(){
     return "<i class='pi pi-map-marker'></i>";
   };
-  deleteIcon = function(){
-    return "<i class='pi pi-delete-left'></i>";
-  };
-  editIcon = function(){
-    return "<i class='pi pi-file-edit'></i>";
-  };
+
 
   columns :ColumnDefinition[] = [
     {title:'Color',field:'color',width:'30%',headerSort:false,resizable:false},
@@ -36,7 +31,7 @@ export class AnswersComponent  implements AfterViewInit ,OnChanges{
 
   ]
 
-  @Input()data :IData[] = []
+  data :IData[] = []
 
 
 
@@ -59,11 +54,11 @@ export class AnswersComponent  implements AfterViewInit ,OnChanges{
   // }
 
   generateTable(){
-    this.tabulatorTable = new Tabulator(this.table.nativeElement, {
-      data:this.data,
-      importFormat:"array",
-      columns:this.columns,
-    });
+    // this.tabulatorTable = new Tabulator(this.table.nativeElement, {
+    //   data:this.data,
+    //   importFormat:"array",
+    //   columns:this.columns,
+    // });
 
   }
 
@@ -75,7 +70,11 @@ export class AnswersComponent  implements AfterViewInit ,OnChanges{
     this.generateTable()
 
     this.ansServ.addedAnswer.subscribe(m=>{
-      this.tabulatorTable.addRow(m as IData,true)
+      // console.log(m)
+
+      this.data = [m as IData,...this.data]
+
+      // this.tabulatorTable.addRow(m as IData,true)
     })
   }
 

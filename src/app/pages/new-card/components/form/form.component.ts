@@ -28,7 +28,7 @@ export class FormComponent   {
 
   constructor(private ansServ:AnswerService) {
     const group: any = {
-      'color':new FormControl()
+      'color':new FormControl(),
     };
 
     this.form_settings.fields.forEach(inputConfig => {
@@ -74,6 +74,7 @@ export class FormComponent   {
 
 
   test(){
+    this.answerInput.nativeElement.style.border = 'none'
     this.isSubmitted = true
     console.log(this.form)
   }
@@ -83,11 +84,21 @@ export class FormComponent   {
     const color = this.form.get('color')?.value
     const answer = this.answerInput.nativeElement.value
 
-    this.datas.push({color,answer})
+    if(answer.trim() === '' || !color) {
+      this.answerInput.nativeElement.style.border = '1px solid red'
+      return
+    }
+    this.answerInput.nativeElement.style.border = 'none'
 
     this.ansServ.addAnswer({color,answer})
 
-    console.log(this.datas,'answers=====')
+    const formValue = this.form.get('answers')?.value
+
+    this.form.get('answers')?.setValue([{color,answer},...formValue])
+
+    this.answerInput.nativeElement.value = ''
+    this.form.get('color')?.setValue(null)
+
 
   }
 
