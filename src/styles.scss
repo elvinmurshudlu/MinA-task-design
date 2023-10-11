@@ -17,5 +17,25 @@ body * {
 }
 
 
+::-webkit-scrollbar {
+   width: 6px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--footer-bg-color);
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--nav-bg-color);
+
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 

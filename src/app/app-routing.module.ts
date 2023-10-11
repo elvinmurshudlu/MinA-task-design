@@ -10,6 +10,10 @@ const routes: Routes = [{
     {
       path:'new-card',
       loadChildren:()=>import("./pages/new-card/new-card.module").then(m=>m.NewCardModule)
+    },
+    {
+      path:':id',
+      loadChildren:()=>import('./pages/stats/stats.module').then(m=>m.StatsModule)
     }
     ]
 }];

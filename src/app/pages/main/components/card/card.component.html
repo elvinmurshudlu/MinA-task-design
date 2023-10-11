@@ -1,4 +1,4 @@
-<div class="card-item d-flex">
+<a [routerLink]="[card.id]" class="card-item d-flex">
   <img [src]="card.img" alt="">
   <div class="content d-flex flex-column justify-content-between align-items-end">
     <div class="vote">Vote:</div>
@@ -15,4 +15,4 @@
     </div>
 
   </div>
-</div>
+</a>
