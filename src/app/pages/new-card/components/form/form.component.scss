@@ -106,19 +106,22 @@ height: 100%;
   background-color: var(--nav-bg-color);
 }
 
+.btn-submit-container{
+  padding-top: 15px;
+  .btn-submit{
+    //position:absolute;
+    color: var(--form-btn-color);
+    background-color: var(--footer-bg-color);
+    border: none;
+    padding: 6px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    //@include addBorder;
+    border-radius:3px;
 
-.btn-submit{
-  position:absolute;
-  bottom: 0;
-  right: 0;
-  color: var(--form-btn-color);
-  background-color: var(--footer-bg-color);
-  border: none;
-  padding: 6px 20px;
-  font-size: 13px;
-  font-weight: bold;
-  //@include addBorder;
-  border-radius:3px;
+  }
+
 
 }
+
 
