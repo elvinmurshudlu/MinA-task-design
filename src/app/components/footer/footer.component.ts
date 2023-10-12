@@ -9,6 +9,7 @@ import {footerMenu} from "../../constants/footer";
 })
 export class FooterComponent {
 
+
   protected readonly settings = settings;
   protected readonly footerMenu = footerMenu;
 }
