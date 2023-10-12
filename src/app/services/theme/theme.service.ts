@@ -6,10 +6,11 @@ import {BehaviorSubject} from "rxjs";
 })
 export class ThemeService {
 
-  isDarkTheme$ = new BehaviorSubject<boolean>(true)
+  isDarkTheme$ = new BehaviorSubject<boolean>(localStorage.getItem('theme') !=='light')
   constructor() { }
 
   changeTheme(){
+    localStorage.setItem('theme',this.isDarkTheme$.value ?'light' : 'dark')
     this.isDarkTheme$.next(!this.isDarkTheme$.value)
   }
 }
