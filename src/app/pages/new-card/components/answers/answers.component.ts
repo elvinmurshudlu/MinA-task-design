@@ -21,7 +21,6 @@ export class AnswersComponent  implements AfterViewInit {
   ngAfterViewInit() {
 
     this.ansServ.addedAnswer.subscribe(m=>{
-      // console.log(m)
 
       this.data = [m as IData,...this.data]
 

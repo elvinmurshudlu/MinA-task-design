@@ -20,11 +20,6 @@ export class TableComponent implements AfterViewInit{
   tabulatorTable !:TypeTabulator
 
 
-  geoMapIcon = function(){
-    return "<i class='pi pi-map-marker'></i>";
-  };
-
-
   columns :ColumnDefinition[] = [
     {title:'#',field:'id',width:'10%',headerSort:false,resizable:false},
     {title:'Place Name',field:'label',width:'30%',headerSort:false ,resizable:false},

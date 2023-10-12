@@ -51,7 +51,6 @@ export class BarChartComponent implements OnInit{
       this.chartDatasets[0].data.push(m.vote)
     })
 
-    console.log(this.chartLabels,this.chartDatasets)
   }
 
 

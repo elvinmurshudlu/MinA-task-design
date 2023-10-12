@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {form_settings} from "../../../../constants/forms";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts} from "ngx-bootstrap-multiselect";
@@ -32,7 +32,6 @@ interface IFormValue {
 })
 export class FormComponent   {
 @ViewChild('answer') answerInput !:ElementRef<HTMLInputElement>
-  datas:IAnswers[]  = []
 
 
 
@@ -103,12 +102,11 @@ export class FormComponent   {
     }
      const {color,...rest}= this.form.value as IFormValue
 
-    this.http.post("https://jsonplaceholder.typicode.com/posts",rest).subscribe(response=>{
+    this.http.post(form_settings.enpoint,rest).subscribe(response=>{
       console.log(response)
     },error=>{
       console.log(error)
     })
-    // console.log('Melumat gonderildi',rest)
   }
 
 
